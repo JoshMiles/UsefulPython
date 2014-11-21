@@ -10,3 +10,5 @@ To use, simply download it and put it in the folder with your python project the
 at the top.
 
 You can now use use UsefulPython.
+
+The "how to use" is in the useful.py file
