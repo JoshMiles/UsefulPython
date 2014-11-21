@@ -14,3 +14,19 @@ def read_file(file_location):
     str = fo.read()
     fo.close()
     return str
+
+#
+# To use, import useful and then use useful.write_file("file location", "data")
+#
+def write_file(file_location, data):
+    fo = open(file_location, "wb")
+    fo.write(data)
+    fo.close()
+
+
+#
+# To use, import useful and then use useful.rappend_file("file location", "data")
+#
+def append_file(file_location, data):
+    with open(file_location, "a") as myfile:
+        myfile.write(data)
