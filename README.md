@@ -1,4 +1,0 @@
-UsefulPython
-============
-
-Useful Python ish
