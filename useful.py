@@ -22,11 +22,26 @@ def write_file(file_location, data):
     fo = open(file_location, "wb")
     fo.write(data)
     fo.close()
-
+    
+#
+# To use, import useful and then use useful.writeline("file location", "data")
+#
+# This function writes a line to the specified file
+def writeline(file_location, data):
+    fo = open(file_location, "wb")
+    fo.write(data + "\n")
+    fo.close()
 
 #
-# To use, import useful and then use useful.rappend_file("file location", "data")
+# To use, import useful and then use useful.append_file("file location", "data")
 #
 def append_file(file_location, data):
     with open(file_location, "a") as myfile:
         myfile.write(data)
+
+#
+# To use, import useful and then use useful.appendline("file location", "data")
+#
+def appendline(file_location, data):
+    with open(file_location, "a") as myfile:
+        myfile.write(data + "\n")
