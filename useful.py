@@ -1,5 +1,5 @@
 import hashlib
-
+import tkinter.messagebox
 #
 # To use, import useful and then use useful.encrypt("text to be encrypted")
 #
@@ -19,7 +19,7 @@ def read_file(file_location):
 # To use, import useful and then use useful.write_file("file location", "data")
 #
 def write_file(file_location, data):
-    fo = open(file_location, "wb")
+    fo = open(file_location, "w")
     fo.write(data)
     fo.close()
     
@@ -28,7 +28,7 @@ def write_file(file_location, data):
 #
 # This function writes a line to the specified file
 def writeline(file_location, data):
-    fo = open(file_location, "wb")
+    fo = open(file_location, "w")
     fo.write(data + "\n")
     fo.close()
 
@@ -45,3 +45,10 @@ def append_file(file_location, data):
 def appendline(file_location, data):
     with open(file_location, "a") as myfile:
         myfile.write(data + "\n")
+#
+# To use, import useful and then use useful.showinfo("Message") - a title doesn't have to be defined.
+#
+def showinfo(message, title=""):
+    tkinter.messagebox.showinfo(title,message)
+def showerror(message, title=""):
+    tkinter.messagebox.showerror(title,message)            
